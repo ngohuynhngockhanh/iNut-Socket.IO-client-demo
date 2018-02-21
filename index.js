@@ -36,7 +36,7 @@ socket.on('not_accept', function(res) {
 //Khi có data thì bạn sẽ lắng nghe được ở hàm này, if else xử lý thôi ^_^
 socket.on('data', function(res) {
 	var node_id = res.node_id
-	var data = res_data
+	var data = res.data
 	console.log(node_id, data)
 })
 
