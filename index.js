@@ -27,10 +27,10 @@ socket.on('accept', function(res) {
 })
 
 //Có lỗi thì nó sẽ báo cho bạn ở đây, ví dụ như mã token bị sai nè... bạn sẽ code thêm vào!
-socket.on('error', function(res) {
+socket.on('not_accept', function(res) {
 	var node_id = res.node_id
 	var error = res.error
-	console.error(node_id, error)
+	console.log(node_id, error)
 })
 
 //Khi có data thì bạn sẽ lắng nghe được ở hàm này, if else xử lý thôi ^_^
